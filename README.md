@@ -50,59 +50,59 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
   - Any comment/reply can have a maximum of 250 characters.
 
   ## Divided Component
-1. Suggestion Route
-  1. Navigation Component 
+  ### Suggestion Route
+  #### Navigation Component 
     1. Title Component 
     2. Navigate Component 
     3. Road Map Component
-  2. Suggestion Bar (upvote, add feedback)
+  #### Suggestion Bar (upvote, add feedback)
     1. Show how many suggestion in the corner
     2. Sort by: Most upvote, least upvotem , most comment, least comment ... 
       _ When clicked sort by will show the form that choosing Most to Least Upvote, most comment to least comment...
     3. Add Feedback button 
       _ When clicked in Add feedback button will direct to Add Feedback Component
-  3. Suggestion component 
+  #### Suggestion component 
     1. Upvote component 
     2. Title, Description, Status component
     3. Comment button component
       _ When clicked in comment button it will direct to detail Component
-  4. If Suggestion is empty add the "There is no feedback yet" and the add Feedback in the middle
+  #### If Suggestion is empty add the "There is no feedback yet" and the add Feedback in the middle
 
-2. Feedback Detail Route 
-  1. Navigation   
+ ### Feedback Detail Route 
+  #### Navigation   
     1. Go back button 
     2. Edit Feedback button 
-  2. Suggestion component
+  #### Suggestion component
     1. Upvote component 
     2. Title, Description, Status component
     3. Comment button component
-  3. Comment Component 
+  #### Comment Component 
     1. People who comment Component 
       1. Picture 
       2. Name email and comment 
       3. Reply button 
     2. People can reply the comment who reply on the component
-  4. Add Comment Component
+  #### Add Comment Component
     1. Add comment text 
     2. Form add comment
     3. 250 Characters left and Post comment button 
 
-3. New Feedback Form  
+  ### New Feedback Form  
   1. Create New Feedback text
   2. Feedback title texrt and input 
   3. category and option
   4. Feedback Detail and description
   5. Cancel button and Addfeedback button 
 
-4. Editing Feedback Route
+  ### Editing Feedback Route
   1. Editing and feedback text
   2. Feedback title and input
   3. Category and options
   4. Update Status and options
   5. Feedback Detail and description 
 
-5. Roadmap Route 
-  1. Planned Container Component
+### Roadmap Route 
+  #### Planned Container Component
     1. Planned Component
       1. Planned text
       2. Title, Description, Status component
