@@ -42,7 +42,7 @@ export const commentSchema = new Schema({
 
 export const productFeedbackSchema = new Schema({
   id: {
-    type: String, 
+    type: Number, 
     required: true
   },
   title: {
