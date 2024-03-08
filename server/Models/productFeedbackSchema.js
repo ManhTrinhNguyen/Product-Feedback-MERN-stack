@@ -26,16 +26,27 @@ export const commentSchema = new Schema({
     image: String,
     name: String,
     username: String
-  }
+  },
+  replies: [
+    {
+      content: String,
+      replyingTo: String,
+      user: {
+        image: String,
+        name: String,
+        username: String
+      }
+    }
+  ]
 })
 
 export const productFeedbackSchema = new Schema({
   id: {
-    type: Number,
-    required: true 
+    type: String, 
+    required: true
   },
   title: {
-    type: String,
+    type: String, 
     required: true
   },
   category: {
@@ -56,5 +67,8 @@ export const productFeedbackSchema = new Schema({
   },
   comments: [commentSchema]
 })
+
+
+
 
 export const ProductFeedback = mongoose.model('ProductFeedback', productFeedbackSchema)
