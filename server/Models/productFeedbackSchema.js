@@ -1,24 +1,5 @@
 import mongoose, { Schema } from "mongoose";
 
-// {
-//   "id": 1,
-//   "title": "Add tags for solutions",
-//   "category": "enhancement",
-//   "upvotes": 112,
-//   "status": "suggestion",
-//   "description": "Easier to search for solutions based on a specific stack.",
-//   "comments": [
-//     {
-//       "id": 1,
-//       "content": "Awesome idea! Trying to find framework-specific projects within the hubs can be tedious",
-//       "user": {
-//         "image": "./assets/user-images/image-suzanne.jpg",
-//         "name": "Suzanne Chang",
-//         "username": "upbeat1811"
-//       }
-//     },
-
-
 export const commentSchema = new Schema({
   id: Number,
   content: String,

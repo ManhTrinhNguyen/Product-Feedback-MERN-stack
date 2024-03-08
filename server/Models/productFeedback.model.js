@@ -31,9 +31,16 @@ export async function createNewFeedback(feedback) {
 
   const allFeedbackLenght = allFeedbackArray.length
 
+  // Assigan newFeedback
+
+  const newFeedback = Object.assign(feedback, {
+    status: 'suggestion',
+    upvotes: 0
+  });
+  
   await ProductFeedback.findOneAndUpdate({
     id: allFeedbackLenght + 1
-  }, feedback, {
+  }, newFeedback, {
     upsert: true
   })
 }
