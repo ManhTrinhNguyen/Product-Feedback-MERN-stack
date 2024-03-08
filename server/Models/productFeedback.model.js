@@ -20,7 +20,20 @@ export default async function loadProductFeedbackToDB() {
 }
 
 // Get all feedback
-
 export async function getAllFeedback() {
   return await ProductFeedback.find({})
+}
+
+// Create new Feedback 
+export async function createNewFeedback(feedback) {
+  const allFeedbackArray = await getAllFeedback()
+  if (!allFeedbackArray) return;
+
+  const allFeedbackLenght = allFeedbackArray.length
+
+  await ProductFeedback.findOneAndUpdate({
+    id: allFeedbackLenght + 1
+  }, feedback, {
+    upsert: true
+  })
 }
