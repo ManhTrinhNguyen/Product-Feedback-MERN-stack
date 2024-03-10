@@ -1,4 +1,4 @@
-import { getAllFeedback, createNewFeedback, updateFeedback} from "../../Models/productFeedback.model.js";
+import { getAllFeedback, createNewFeedback, updateFeedback, deleteFeedback} from "../../Models/productFeedback.model.js";
 
 export async function httpGetAllFeedBack(req, res) {
   res.status(200).json(await getAllFeedback())
@@ -25,3 +25,14 @@ export async function httpUpdateFeedback(req, res) {
 
   res.status(200).json(updated)
 }
+
+export async function httpDeleteFeedback(req, res) {
+  const feedbackId = Number(req.params.id)
+  console.log(feedbackId)
+
+  const deleted = await deleteFeedback(feedbackId)
+
+  res.status(200).json(deleted)
+}
+
+

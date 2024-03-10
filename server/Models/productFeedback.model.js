@@ -45,8 +45,7 @@ export async function createNewFeedback(feedback) {
   })
 }
 
-
-// Find and update feedback 
+// Update feedback 
 export async function updateFeedback(id, feedbackUpdate) {
   await ProductFeedback.updateOne({
     id: id
@@ -54,3 +53,11 @@ export async function updateFeedback(id, feedbackUpdate) {
     upsert: true
   })
 };
+
+// Delete feedback 
+export async function deleteFeedback(id) {
+  if (!id) {
+    throw new Error('There is no Id found!')
+  }
+  await ProductFeedback.deleteOne({id: id})
+}
