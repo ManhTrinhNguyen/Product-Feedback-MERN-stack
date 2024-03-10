@@ -50,6 +50,4 @@ export const productFeedbackSchema = new Schema({
 })
 
 
-
-
 export const ProductFeedback = mongoose.model('ProductFeedback', productFeedbackSchema)

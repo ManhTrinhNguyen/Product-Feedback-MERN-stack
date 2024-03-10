@@ -37,10 +37,20 @@ export async function createNewFeedback(feedback) {
     status: 'suggestion',
     upvotes: 0
   });
-  
+
   await ProductFeedback.findOneAndUpdate({
     id: allFeedbackLenght + 1
   }, newFeedback, {
     upsert: true
   })
 }
+
+
+// Find and update feedback 
+export async function updateFeedback(id, feedbackUpdate) {
+  await ProductFeedback.updateOne({
+    id: id
+  }, feedbackUpdate, {
+    upsert: true
+  })
+};
