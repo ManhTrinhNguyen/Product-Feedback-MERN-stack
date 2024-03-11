@@ -14,10 +14,12 @@ app.use(cors({
 }));
 app.use(express.json())
 
+// User Router
+app.use('/user', userRouter);
+
 // Feedback Router
 app.use('/', productFeedbackRouter);
 
-// User Router
-app.use('/user', userRouter);
+
 
 export default app

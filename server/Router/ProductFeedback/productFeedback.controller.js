@@ -1,7 +1,6 @@
 import { getAllFeedback, createNewFeedback, updateFeedback, deleteFeedback } from "../../Models/productFeedbackModel/productFeedback.model.js";
-import { findProductFeedback } from "../../Models/commentModel/comment.model.js";
+
 export async function httpGetAllFeedBack(req, res) {
- 
   res.status(200).json(await getAllFeedback())
 }
 
