@@ -1,7 +1,7 @@
 import http from 'http'
 import app from './app.js';
 import mongoose from 'mongoose';
-import loadProductFeedbackToDB from './Models/productFeedback.model.js';
+import loadProductFeedbackToDB from './Models/productFeedbackModel/productFeedback.model.js';
 
 const PORT = 8000;
 

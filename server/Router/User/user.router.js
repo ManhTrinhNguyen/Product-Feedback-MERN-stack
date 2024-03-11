@@ -1,8 +1,10 @@
 import express from 'express'
-import { httpSignIn } from './user.controller.js'
+import { httpSignUp, httpSignIn } from './user.controller.js'
 
 const userRouter = express.Router()
 
-userRouter.post('/signup', httpSignIn)
+userRouter.post('/signup', httpSignUp);
+userRouter.post('/signin', httpSignIn);
+
 
 export default userRouter

@@ -16,3 +16,4 @@
 .prettierignore
 
 data.json
+.env
