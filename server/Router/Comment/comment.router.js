@@ -3,6 +3,6 @@ import { httpCreateNewComment } from './comment.controller.js';
 
 const commentRouter = express.Router();
 
-commentRouter.post('/comment/:id', httpCreateNewComment)
+commentRouter.post('/feedback/comment/:id', httpCreateNewComment)
 
 export default commentRouter
