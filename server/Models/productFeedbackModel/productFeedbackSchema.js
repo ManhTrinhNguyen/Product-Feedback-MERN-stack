@@ -51,4 +51,4 @@ export const productFeedbackSchema = new Schema({
 
 
 export const ProductFeedback = mongoose.model('ProductFeedback', productFeedbackSchema)
-export const Comment = mongoose.model('comment', commentSchema)
+export const Comment = mongoose.model('Comment', commentSchema)

@@ -5,16 +5,17 @@ export async function httpCreateNewComment(req, res) {
   const { content } = req.body;
 
   const feedback = await ProductFeedback.findById(id)
-  
+
   if (!feedback) {
     return res.status(400).json({
-      error: 'There is no feedback found!'
+      error: 'Feedback not found!'
     })
   }
 
+  const newCommentId = feedback.comments.length + 1
   const newComment = {
     content,
-    user: {}
+    newCommentId
   }
 
   feedback.comments.push(newComment);
