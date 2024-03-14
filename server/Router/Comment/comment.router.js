@@ -1,8 +1,9 @@
 import express from 'express'
-import { httpCreateNewComment } from './comment.controller.js';
+import { httpCreateNewComment, httpDeleteNewComment } from './comment.controller.js';
 
 const commentRouter = express.Router();
 
-commentRouter.post('/feedback/comment/:id', httpCreateNewComment)
+commentRouter.post('/feedback/:feedbackId/comments', httpCreateNewComment);
+commentRouter.delete('/feedback/:feedbackId/comments/:commentId', httpDeleteNewComment);
 
-export default commentRouter
+export default commentRouter;
