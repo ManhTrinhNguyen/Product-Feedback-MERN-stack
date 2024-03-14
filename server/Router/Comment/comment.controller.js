@@ -18,6 +18,12 @@ export async function httpCreateNewComment(req, res) {
     id: newCommentId
   }
 
+  if (!newComment.content) {
+    return res.status(400).json({
+      error: 'Need Content to add!'
+    })
+  }
+
   feedback.comments.push(newComment);
 
   await feedback.save();
