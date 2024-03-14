@@ -22,6 +22,7 @@ export async function httpSignUp(req, res) {
 
 export async function httpSignIn(req, res) {
   const { username, password } = req.body;
+
   const secretKey = process.env.JWT_SECRET_KEY;
 
   const existingUser = await User.findOne({ username });
