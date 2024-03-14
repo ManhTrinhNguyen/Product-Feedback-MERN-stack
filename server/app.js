@@ -1,10 +1,30 @@
 import express from 'express'
+import cors from 'cors'
+import 'dotenv/config'
+
+import productFeedbackRouter from './Router/ProductFeedback/productFeedback.router.js';
+import userRouter from './Router/User/user.router.js';
+import commentRouter from './Router/Comment/comment.router.js';
+import repliesRouter from './Router/Replies/replies.router.js';
 
 const app = express();
 
+app.use(cors({
+  origin: 'http://localhost:8000'
+}));
+app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('Hello world')
-})
+// User Router
+app.use('/user', userRouter);
+
+// Feedback Router
+app.use('/', productFeedbackRouter);
+
+// Comment Router
+app.use('/', commentRouter);
+
+// Replies Router 
+app.use('/', repliesRouter);
+
 
 export default app
