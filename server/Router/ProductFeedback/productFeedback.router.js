@@ -6,10 +6,7 @@ const productFeedbackRouter = express.Router()
 
 productFeedbackRouter.get('/feedback', httpGetAllFeedBack)
 productFeedbackRouter.post('/feedback', verifyToken, httpCreateNewFeedback)
-productFeedbackRouter.patch('/feedback/:id', httpUpdateFeedback)
-productFeedbackRouter.delete('/feedback/:id', httpDeleteFeedback)
-
-
-
+productFeedbackRouter.patch('/feedback/:id', verifyToken, httpUpdateFeedback)
+productFeedbackRouter.delete('/feedback/:id', verifyToken, httpDeleteFeedback)
 
 export default productFeedbackRouter
